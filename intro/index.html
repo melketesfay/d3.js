@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://d3js.org/d3.v7.js"></script>
+    <!-- <script src="https://d3js.org/d3.v6.js"></script> -->
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        /* overflow: hidden; */
+      }
+      svg {
+        margin: 0;
+        overflow: hidden;
+        background-color: black;
+      }
+      circle {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body ">
+    <div id="chart"></div>
+    <div id="test" style="color: red;"><h1>hallo</h1></div>
+  </body>
+  <script src="script.js"></script>
+
+  <script>
+    document.body.addEventListener("click", log);
+    function log() {
+      console.log("hallo");
+      document.body.style.backgroundColor = "red";
+      document.getElementById("test").backgroundColor = "green";
+    }
+
+    setTimeout(() => {
+        document.body.click()
+    }, 2000);
+  </script>
+</html>
