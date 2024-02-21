@@ -107,7 +107,7 @@ setInterval(() => {
     
     data = data.map(d=>({
         x: d*130,
-        y: 100- Math.abs(Math.sin(d*0.4+t)*100),
+        y: 100- Math.abs(Math.sin(d*0.4*t)*100),
         r: 10+Math.sin(d+t)*5
     }))
 
