@@ -86,11 +86,11 @@ var t = 0;
 // sine wave with join and range path
 setInterval(() => {
   let n = 50 + Math.sin(t) * 50;
-  let data = d3.range(0, 10, 1);
+  let data = d3.range(0, 10, 0.7);
 
   data = data.map((d) => ({
-    x: d * 130,
-    y: 100 - Math.abs(Math.sin(d * 0.4 * t) * 100),
+    x: d * 80,
+    y: 100 - Math.abs(Math.sin(d + t * 0.2) * 50),
     r: 10 + Math.sin(d + t) * 5,
   }));
 
@@ -115,4 +115,4 @@ setInterval(() => {
     .attr("stroke-width", 2);
 
   t = t + 0.01;
-}, 10);
+}, 1000 / 60);
