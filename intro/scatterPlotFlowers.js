@@ -71,10 +71,24 @@ const main = async()=>{
    svg.append("g").attr("transform", `translate(${margin.left},0)`).call(d3.axisLeft(yScale)).attr("fill","red");
    svg.append("g").attr("transform", `translate(0,${window.innerHeight-margin.bottom})`).call(d3.axisBottom(xScale)).attr("fill","red");
 svg.selectAll("text").style("color","green").style("font-size","1.6rem").style("font-weight",900)
+
+d3.selectAll("body").append("h1").attr("class","title").style("color","red")
+
+//.attr("transform",`translate(${400},${400})`)
   
+d3.selectAll("circle").on("click", showTitle)
+function showTitle(){
+    console.log("hallo")
+    document.querySelector(".title").innerHTML = this.childNodes[0].innerHTML;
+    
+}
 
 
 } 
 
 main()
+
+
+
+
 
